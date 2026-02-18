@@ -140,7 +140,3 @@ SensorySafari-Server/
 ```
 
 ---
-
-## License
-
-MIT
