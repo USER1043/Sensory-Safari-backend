@@ -17,7 +17,6 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// Routes
 import Animal from './models/Animal.js';
 
 const upload = multer({ storage: multer.memoryStorage() });
@@ -43,6 +42,7 @@ const uploadToCloudinary = (buffer, folder, resourceType = 'image') => {
     });
 };
 
+// Routes
 app.get('/api/animals', async (req, res) => {
     try {
         const animals = await Animal.find();
