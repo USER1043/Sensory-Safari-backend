@@ -8,9 +8,10 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+const allowedOrigins = process.env.FRONTEND_URL;
 
 app.use(cors({
-    origin: 'http://localhost:5173', // Allow frontend
+    origin: allowedOrigins,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
